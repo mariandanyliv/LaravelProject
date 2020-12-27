@@ -14,8 +14,8 @@ class MainController extends Controller
         return view('home', ["artical_paper" => $artical_paper->all()]);
     }
 
-    public function addArtical() {
-        return view('addArtical');
+    public function ArticalSetting() {
+        return view('ArticalSetting');
     }
 
     public function formAdd_check(Request $request1) 
@@ -67,9 +67,9 @@ class MainController extends Controller
     }
 
     
-    public function read_paper($id) 
+    public function ReadArtical($id) 
     {
         $read_paper = new artical_paper();
-        return view('read_paper', ["read_paper" => $read_paper->find($id)]);
+        return view('ReadArtical', ["ReadArtical" => $read_paper->find($id)]);
     }
 }

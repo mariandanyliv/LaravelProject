@@ -14,15 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', 'App\Http\Controllers\MainController@home')->name('home');
-
-Route::get('/addArtical', 'App\Http\Controllers\MainController@addArtical');
-
-Route::get('/read_paper/{id}', 'App\Http\Controllers\MainController@read_paper')->name('read_paper');
+Route::get('/ArticalSetting', 'App\Http\Controllers\MainController@ArticalSetting');
+Route::get('/ReadArtical/id={id}', 'App\Http\Controllers\MainController@ReadArtical')->name('ReadArtical');
 
 Route::post('/formAdd/check', 'App\Http\Controllers\MainController@formAdd_check');
 Route::post('/formDel/check', 'App\Http\Controllers\MainController@formDel_check');
 Route::post('/formUpd/check', 'App\Http\Controllers\MainController@formUpd_check')->name('formUpd_check');
-
-// Route::get('/user/{id}/{name}', function ($id, $name) {
-//     return 'ID: ' . $id . ' name: ' . $name;
-// });
